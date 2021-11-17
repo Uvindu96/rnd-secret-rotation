@@ -1,7 +1,7 @@
 variables:
   # Azure DevOps Service Connection to the Azure Key Vault holding the latest client secrets
   # for Azure Active Directory (AD) Applications
-  AZURE_KEY_VAULT_SERVICE_CONNECTION: 'AsgardeoRND-rnd-38785beb-5019-4896-8679-3d41ddacc4b1'
+  AZURE_KEY_VAULT_SERVICE_CONNECTION: 'uvindu-secret-rotation-rnd'
   # Name of the Azure Key Vault holding the latest client secrets for Azure Active Directory Applications
   AZURE_KEY_VAULT_NAME: 'uvindu-key-vault-v2'
   # Name of the customer and specific environment (e.g. staging environment of customer ABC -> abc-stage)
