@@ -13,7 +13,7 @@ resources:
       type: github
       name: wso2-enterprise/azure-pipeline-templates
       ref: refs/tags/v1.1.1
-      endpoint: Uvindu
+      endpoint: Uvindu96
 
 jobs:
   - template: cd-pipelines/templates/aad-app-secrets.yaml@templates
