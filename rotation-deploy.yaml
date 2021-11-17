@@ -1,0 +1,25 @@
+trigger:
+  - none
+
+variables:
+  - template: ./variables.yaml
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: wso2-enterprise/azure-pipeline-templates
+      ref: refs/tags/v1.1.1
+      endpoint: Uvindu
+
+jobs:
+  - template: cd-pipelines/templates/aad-app-secrets.yaml@templates
+    parameters:
+      AZURE_AD_SERVICE_PRINCIPAL_NAMES:
+        - 'key-vault-cluster-database-ad-application'
+        - 'key-vault-cluster-product-ad-application'
+      AZURE_KEY_VAULT_SERVICE_CONNECTION: $(AZURE_KEY_VAULT_SERVICE_CONNECTION)
+      AZURE_KEY_VAULT_NAME: $(AZURE_KEY_VAULT_NAME)
