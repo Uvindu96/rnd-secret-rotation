@@ -19,7 +19,6 @@ jobs:
   - template: cd-pipelines/templates/aad-app-secrets.yaml@templates
     parameters:
       AZURE_AD_SERVICE_PRINCIPAL_NAMES:
-        - 'key-vault-cluster-database-ad-application'
-        - 'key-vault-cluster-product-ad-application'
+        - 'asg-rnd3-test-ad-application'
       AZURE_KEY_VAULT_SERVICE_CONNECTION: $(AZURE_KEY_VAULT_SERVICE_CONNECTION)
       AZURE_KEY_VAULT_NAME: $(AZURE_KEY_VAULT_NAME)
